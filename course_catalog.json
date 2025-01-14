@@ -176,5 +176,115 @@
         "prerequisites": "",
         "grading": "",
         "description": ""
+    },
+    {
+        "code": "MSE 351",
+        "name": "Materials Science",
+        "instructor": "Jack",
+        "semester": "spring",
+        "schedule": "Monday-Saturday",
+        "classroom": "TBD",
+        "prerequisites": "None",
+        "grading": "",
+        "description": ""
+    },
+    {
+        "code": "qwe",
+        "name": "qwertryui",
+        "instructor": "wert",
+        "semester": "qwe",
+        "schedule": "123",
+        "classroom": "TBD",
+        "prerequisites": "",
+        "grading": "",
+        "description": ""
+    },
+    {
+        "code": "asdfdg",
+        "name": "weretg",
+        "instructor": "wert",
+        "semester": "wre",
+        "schedule": "wre",
+        "classroom": "TBD",
+        "prerequisites": "",
+        "grading": "",
+        "description": ""
+    },
+    {
+        "code": "ewr",
+        "name": "3qwere",
+        "instructor": "hello kitty",
+        "semester": "winter",
+        "schedule": "4",
+        "classroom": "TBD",
+        "prerequisites": "",
+        "grading": "",
+        "description": ""
+    },
+    {
+        "code": "tuib",
+        "name": "Architecture",
+        "instructor": "shreya",
+        "semester": "12",
+        "schedule": "Monday, Wednesday",
+        "classroom": "TBD",
+        "prerequisites": "",
+        "grading": "",
+        "description": ""
+    },
+    {
+        "code": "tyuohhv",
+        "name": "shreaosfb",
+        "instructor": "shreya",
+        "semester": "12",
+        "schedule": "12",
+        "classroom": "TBD",
+        "prerequisites": "",
+        "grading": "",
+        "description": ""
+    },
+    {
+        "code": "reyrt",
+        "name": "adegrgth",
+        "instructor": "wewe",
+        "semester": "wer",
+        "schedule": "wewrwr",
+        "classroom": "TBD",
+        "prerequisites": "",
+        "grading": "",
+        "description": ""
+    },
+    {
+        "code": "vjhu",
+        "name": "iuho; ",
+        "instructor": "dtrryu",
+        "semester": "giuyio",
+        "schedule": "yoihj",
+        "classroom": "TBD",
+        "prerequisites": "",
+        "grading": "",
+        "description": ""
+    },
+    {
+        "code": "2fgt",
+        "name": "wetv",
+        "instructor": "wqerty",
+        "semester": "23rf",
+        "schedule": "ewt",
+        "classroom": "TBD",
+        "prerequisites": "",
+        "grading": "",
+        "description": ""
+    },
+    {
+        "code": "srdfgh",
+        "name": "rdtfyg",
+        "instructor": "wertyuio",
+        "semester": "rtyui",
+        "schedule": "ertyu",
+        "classroom": "TBD",
+        "prerequisites": "",
+        "grading": "",
+        "description": ""
     }
 ]

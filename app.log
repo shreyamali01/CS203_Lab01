@@ -194,3 +194,31 @@ INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:46:27] "[32mPOST /add-course HTTP/1
 INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:46:27] "GET /catalog HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:46:28] "GET /course/12345 HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:46:34] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 120-211-196
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2025 14:54:16] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2025 14:56:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2025 14:56:11] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2025 14:56:13] "GET /add-course HTTP/1.1" 200 -
+INFO:root:Course added successfully: MSE 351 - Materials Science by Jack for spring
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2025 14:56:51] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2025 14:56:51] "GET /catalog HTTP/1.1" 200 -
+DEBUG:fsevents:NativeEvent(path="/Users/shreya/Documents/CS203_Lab_01/course_catalog.json", inode=16050049, flags=11400, id=291765504): is_file, is_inode_meta_mod, is_modified
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/shreya/Documents/CS203_Lab_01/course_catalog.json', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2025 14:56:56] "GET /add-course HTTP/1.1" 200 -
+INFO:root:Course added successfully: qwe - qwertryui by wert for qwe
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2025 14:57:20] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2025 14:57:20] "GET /catalog HTTP/1.1" 200 -
+DEBUG:fsevents:NativeEvent(path="/Users/shreya/Documents/CS203_Lab_01/course_catalog.json", inode=16050049, flags=11400, id=291766138): is_file, is_inode_meta_mod, is_modified
+DEBUG:fsevents:queue_event FileModifiedEvent(src_path='/Users/shreya/Documents/CS203_Lab_01/course_catalog.json', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2025 14:57:23] "GET /add-course HTTP/1.1" 200 -
+ERROR:root:Duplicate course code: MSE 351
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2025 14:57:39] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2025 14:57:39] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2025 14:57:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2025 14:57:44] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2025 14:57:46] "GET /catalog HTTP/1.1" 200 -
