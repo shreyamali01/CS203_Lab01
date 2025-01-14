@@ -8,6 +8,7 @@ from opentelemetry.sdk.trace.export import BatchSpanProcessor
 from opentelemetry.exporter.jaeger.thrift import JaegerExporter
 from opentelemetry.instrumentation.flask import FlaskInstrumentor
 from pythonjsonlogger import jsonlogger
+from opentelemetry.sdk.resources import Resource
 
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
@@ -17,7 +18,7 @@ app = Flask(__name__)
 app.secret_key = 'secret'
 COURSE_FILE = 'course_catalog.json'
 
-#setting up JSON logging format
+# Setting up JSON logging format
 logger = logging.getLogger()
 logHandler = logging.StreamHandler()
 
@@ -26,17 +27,18 @@ logHandler.setFormatter(logFormatter)
 logger.addHandler(logHandler)
 logger.setLevel(logging.DEBUG)
 
-#setting up TracerProvider and adding Jaeger exporter
-trace.set_tracer_provider(TracerProvider())
+# Setting up TracerProvider and Adding Jaeger exporter
+trace.set_tracer_provider(TracerProvider(resource=Resource.create({"service.name": "myflask"})))
 jaeger_exporter = JaegerExporter(
     agent_host_name="localhost",
     agent_port=6831,
 )
+
 span_processor = BatchSpanProcessor(jaeger_exporter)
 trace.get_tracer_provider().add_span_processor(span_processor)
 FlaskInstrumentor().instrument_app(app)
 
-#getting a tracer instance
+# Getting a Tracer Instance
 tracer = trace.get_tracer("flask-app","1.0.0")
 
 # Utility Functions
@@ -59,7 +61,7 @@ def save_courses(data):
 # Routes
 @app.route('/')
 def index():
-    with tracer.start_as_current_span("index_route"):
+    with tracer.start_as_current_span("index"):
         span = trace.get_current_span()
         span.set_attribute("user.ip", request.remote_addr)
         span.set_attribute("http.method", request.method)
@@ -67,11 +69,12 @@ def index():
 
 @app.route('/catalog')
 def course_catalog():
-    with tracer.start_as_current_span("course_catalog_route"):
+    with tracer.start_as_current_span("course_catalog"):
         #adding metadata to the spans
         span = trace.get_current_span()
         span.set_attribute("user.ip", request.remote_addr)
         span.set_attribute("http.method", request.method)
+        span.set_attribute("http.status_code", 200)
 
         #debugging
         print(f"Created span for /catalog: {span}.")
@@ -82,12 +85,12 @@ def course_catalog():
 
 @app.route('/course/<code>')
 def course_details(code):
-    with tracer.start_as_current_span("course_details_route"):
+    with tracer.start_as_current_span("course_details"):
         #ading metadata to the span
         span = trace.get_current_span()
         span.set_attribute("user.ip", request.remote_addr)
         span.set_attribute("http.method", request.method)
-
+        span.set_attribute("http.status_code", 200)
         courses = load_courses()
         course = next((course for course in courses if course['code'] == code), None)
     
@@ -100,11 +103,12 @@ def course_details(code):
 #route to add a new course
 @app.route('/add-course', methods=['GET', 'POST'])
 def add_course():
-     with tracer.start_as_current_span("add_course_route"):
+     with tracer.start_as_current_span("add_course"):
          #adding metadata to the span
         span = trace.get_current_span()
         span.set_attribute("user.ip", request.remote_addr)
         span.set_attribute("http.method", request.method)
+        span.set_attribute("http.status_code", 200)
 
         if request.method == 'POST':
             #extracting the form data
@@ -150,7 +154,7 @@ def add_course():
                 'code': course_code,
                 'name': course_name,
                 'instructor': instructor,
-                'semester': semester,  # Default semester to "N/A" if not provided
+                'semester': semester,  
                 'schedule':schedule,
                 'classroom':classroom,
                 'prerequisites':prerequisites,
