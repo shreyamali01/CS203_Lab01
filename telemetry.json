@@ -1,0 +1,18 @@
+{
+    "total_route_request_count": {
+        "/": 0,
+        "/catalog": 1,
+        "/course/<code>": 0,
+        "/add-course": 0
+    },
+    "processing_time": {
+        "/": 0.0,
+        "/catalog": 0.012772083282470703,
+        "/course/<code>": 0.0,
+        "/add-course": 0.0
+    },
+    "error_count": {
+        "missing_fields": 0,
+        "duplicate_course_code": 0
+    }
+}
