@@ -2,7 +2,7 @@ import json
 import os
 from flask import Flask, render_template, request, redirect, url_for, flash
 import logging
-from opentelemetry import trace
+from opentelemetry import trace 
 from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.trace.export import BatchSpanProcessor
 from opentelemetry.exporter.jaeger.thrift import JaegerExporter
@@ -24,6 +24,7 @@ logHandler = logging.StreamHandler()
 
 logFormatter = jsonlogger.JsonFormatter('%(asctime)s %(name)s %(levelname)s %(message)s')
 logHandler.setFormatter(logFormatter)
+logHandler = logging.FileHandler('app.log')
 logger.addHandler(logHandler)
 logger.setLevel(logging.DEBUG)
 
@@ -40,6 +41,8 @@ FlaskInstrumentor().instrument_app(app)
 
 # Getting a Tracer Instance
 tracer = trace.get_tracer("flask-app","1.0.0")
+
+
 
 # Utility Functions
 def load_courses():
@@ -77,9 +80,12 @@ def course_catalog():
         span.set_attribute("http.status_code", 200)
 
         #debugging
-        print(f"Created span for /catalog: {span}.")
-    
-        courses = load_courses()
+        #print(f"Created span for /catalog: {span}.")
+
+        #span for loading courses
+        with tracer.start_as_current_span("load_courses"):
+            courses = load_courses()
+        
         return render_template('course_catalog.html', courses=courses)
 
 
@@ -122,6 +128,20 @@ def add_course():
             grading = request.form.get('grading', '')
             description = request.form.get('description', '')
 
+            #storing current form data
+            form_data = {
+                'code': course_code,
+                'name': course_name,
+                'instructor': instructor,
+                'semester': semester,
+                'schedule': schedule,
+                'classroom': classroom,
+                'prerequisites': prerequisites,
+                'grading': grading,
+                'description': description
+            }
+
+            
             #validating required fields
             if not course_code or not course_name or not instructor or not semester or not schedule:
                 missing_fields = []
@@ -140,34 +160,36 @@ def add_course():
                 missing_fields_str = ", ".join(missing_fields)
                 logging.error(f"Failed to add course: Missing required fields - {missing_fields_str}")
                 flash(f"Please provide the following required fields: {missing_fields_str}.", "error")
-                return redirect(url_for('add_course'))
+                return render_template('add_course.html', form_data=form_data)
             
             courses = load_courses()
 
-            if any(course['code'] == course_code for course in courses):
+            if any(course['code'].lower() == course_code.lower() for course in courses):
                 logging.error(f"Duplicate course code: {course_code}")
                 flash("Course code already exists. Please use a unique code.", "error")
-                return redirect(url_for('add_course'))
+                return render_template('add_course.html', form_data=form_data)
 
             # Save the course
-            save_courses({
-                'code': course_code,
-                'name': course_name,
-                'instructor': instructor,
-                'semester': semester,  
-                'schedule':schedule,
-                'classroom':classroom,
-                'prerequisites':prerequisites,
-                'grading':grading,
-                'description':description
-            })
+            #span for saving the courses
+            with tracer.start_as_current_span("save_course"):
+                save_courses({
+                    'code': course_code,
+                    'name': course_name,
+                    'instructor': instructor,
+                    'semester': semester,  
+                    'schedule':schedule,
+                    'classroom':classroom,
+                    'prerequisites':prerequisites,
+                    'grading':grading,
+                    'description':description
+                })
 
             logging.info(f"Course added successfully: {course_code} - {course_name} by {instructor} for {semester}")
             flash("Course added successfully!", "success")
             return redirect(url_for('course_catalog'))
 
         # Render the form template for GET requests
-        return render_template('add_course.html')
+        return render_template('add_course.html', form_data = {})
 
 
 if __name__ == '__main__':
