@@ -1,0 +1,196 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-015-406
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 01:28:29] "GET /add-course HTTP/1.1" 200 -
+ERROR:root:Missing required fields: code, name, or instructor
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 01:28:50] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 01:28:50] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 01:31:40] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 01:32:51] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 01:33:12] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 01:34:54] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 01:35:13] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 01:35:29] "GET /add-course HTTP/1.1" 200 -
+ERROR:root:Missing required fields: code, name, or instructor
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 01:35:49] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 01:35:49] "GET /add-course HTTP/1.1" 200 -
+ERROR:root:Missing required fields: code, name, or instructor
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 01:54:10] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 01:54:10] "GET /add-course HTTP/1.1" 200 -
+ERROR:root:Missing required fields: code, name, or instructor
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 01:55:32] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 01:55:32] "GET /add-course HTTP/1.1" 200 -
+ERROR:root:Missing required fields: code, name, or instructor
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:06:57] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:06:57] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:07:00] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/shreya/Documents/CS203_Lab_01/app.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-015-406
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:12:37] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:12:40] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:12:41] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:12:41] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:12:41] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:12:52] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:12:52] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/shreya/Documents/CS203_Lab_01/app.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-015-406
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:43:44] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:43:52] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:43:52] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:43:55] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-015-406
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:46:59] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:47:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:47:04] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:47:08] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:47:21] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:47:21] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:47:23] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:47:31] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:47:31] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/shreya/Documents/CS203_Lab_01/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-015-406
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:50:15] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:50:16] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:50:27] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 02:50:27] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-015-406
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 03:44:54] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 03:44:56] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 03:45:37] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 03:45:37] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 03:45:40] "GET /course/HS231 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 03:45:46] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 03:45:48] "GET /course/CS101 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 03:45:51] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 03:45:53] "GET /course/HS231 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 03:45:55] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/shreya/Documents/CS203_Lab_01/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-015-406
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 03:48:41] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 03:48:47] "GET /add-course HTTP/1.1" 200 -
+INFO:root:Course added successfully: sdf - sdf by sdcgg for sdfg
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 03:48:55] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 03:48:55] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/shreya/Documents/CS203_Lab_01/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-015-406
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-015-406
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 11:42:58] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 11:43:00] "[35m[1mGET /add-course HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 11:43:00] "[36mGET /add-course?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 11:43:00] "[36mGET /add-course?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 11:43:00] "GET /add-course?__debugger__=yes&cmd=resource&f=console.png&s=lmVMaR5UE2voVWsLS2p7 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 11:43:00] "[36mGET /add-course?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/Users/shreya/Documents/CS203_Lab_01/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-015-406
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 11:44:14] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 11:44:20] "GET /add-course HTTP/1.1" 200 -
+INFO:root:Course added successfully: 123 - CS 203 by sre for 123e
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 11:44:34] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 11:44:34] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 11:44:40] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 11:45:33] "GET /catalog HTTP/1.1" 200 -
+ERROR:root:Duplicate course code: HS154
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 11:45:41] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 11:45:41] "GET /add-course HTTP/1.1" 200 -
+ERROR:root:Duplicate course code: HS154
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 11:46:02] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 11:46:02] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 11:46:07] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 11:46:11] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 11:46:11] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 11:46:11] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 11:46:12] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-015-406
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 12:15:07] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 12:15:09] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 12:15:35] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 12:15:35] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 12:16:01] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 12:16:01] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 12:16:07] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-015-406
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-015-406
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:21:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:21:34] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:21:48] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:22:38] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:22:38] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:23:13] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:23:13] "GET /add-course HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:23:24] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/shreya/Documents/CS203_Lab_01/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-015-406
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-015-406
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:29:32] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:29:33] "GET /add-course HTTP/1.1" 200 -
+INFO:root:Course added successfully: asdf - asdf by asdf for wertfg
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:29:41] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:29:41] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/shreya/Documents/CS203_Lab_01/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-015-406
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 644-015-406
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:45:38] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:45:39] "GET /add-course HTTP/1.1" 200 -
+ERROR:root:Duplicate course code: HS154
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:46:05] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:46:05] "GET /add-course HTTP/1.1" 200 -
+INFO:root:Course added successfully: 12345 - wert by wer for qwer
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:46:27] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:46:27] "GET /catalog HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:46:28] "GET /course/12345 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jan/2025 23:46:34] "GET /catalog HTTP/1.1" 200 -

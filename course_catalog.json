@@ -20,5 +20,161 @@
         "prerequisites": "Basic Python, Linux",
         "grading": "50% Assignment, 50% Quiz",
         "description": ""
+    },
+    {
+        "code": "HS154",
+        "name": "Mandarin",
+        "instructor": "Kao",
+        "semester": "2"
+    },
+    {
+        "code": "12",
+        "name": "12",
+        "instructor": "123",
+        "semester": "12"
+    },
+    {
+        "code": "12",
+        "name": "12",
+        "instructor": "shreya",
+        "semester": "N/A"
+    },
+    {
+        "code": "qw",
+        "name": "qw",
+        "instructor": "qw",
+        "semester": "qw"
+    },
+    {
+        "code": "13",
+        "name": "12",
+        "instructor": "hello",
+        "semester": "2",
+        "schedule": "23",
+        "classroom": "12",
+        "prerequisites": "None",
+        "grading": "123",
+        "description": "13"
+    },
+    {
+        "code": "ads",
+        "name": "asd",
+        "instructor": "she",
+        "semester": "asd",
+        "schedule": "ad",
+        "classroom": "TBD",
+        "prerequisites": "None",
+        "grading": "TBD",
+        "description": "N/A"
+    },
+    {
+        "code": "12",
+        "name": "12",
+        "instructor": "shreya",
+        "semester": "12",
+        "schedule": "12",
+        "classroom": "TBD",
+        "prerequisites": "None",
+        "grading": "TBD",
+        "description": "N/A"
+    },
+    {
+        "code": "qw",
+        "name": "qw",
+        "instructor": "qw",
+        "semester": "qw",
+        "schedule": "qw",
+        "classroom": "TBD",
+        "prerequisites": "None",
+        "grading": "TBD",
+        "description": "N/A"
+    },
+    {
+        "code": "qw",
+        "name": "qw",
+        "instructor": "sr",
+        "semester": "qw",
+        "schedule": "qw",
+        "classroom": "TBD",
+        "prerequisites": "None",
+        "grading": "TBD",
+        "description": "N/A"
+    },
+    {
+        "code": "12",
+        "name": "12",
+        "instructor": "shreya",
+        "semester": "1",
+        "schedule": "12",
+        "classroom": "TBD",
+        "prerequisites": "None",
+        "grading": "TBD",
+        "description": "N/A"
+    },
+    {
+        "code": "as",
+        "name": "sd",
+        "instructor": "manav m",
+        "semester": "as",
+        "schedule": "as",
+        "classroom": "TBD",
+        "prerequisites": "None",
+        "grading": "TBD",
+        "description": "N/A"
+    },
+    {
+        "code": "HS231",
+        "name": "harry potter",
+        "instructor": "harry potter",
+        "semester": "spring",
+        "schedule": "wednesday",
+        "classroom": "10/101",
+        "prerequisites": "None",
+        "grading": "TBD",
+        "description": "N/A"
+    },
+    {
+        "code": "sdf",
+        "name": "sdf",
+        "instructor": "sdcgg",
+        "semester": "sdfg",
+        "schedule": "sdfg",
+        "classroom": "TBD",
+        "prerequisites": "None",
+        "grading": "TBD",
+        "description": "N/A"
+    },
+    {
+        "code": "123",
+        "name": "CS 203",
+        "instructor": "sre",
+        "semester": "123e",
+        "schedule": "123",
+        "classroom": "TBD",
+        "prerequisites": "None",
+        "grading": "TBD",
+        "description": "N/A"
+    },
+    {
+        "code": "asdf",
+        "name": "asdf",
+        "instructor": "asdf",
+        "semester": "wertfg",
+        "schedule": "asdf",
+        "classroom": "TBD",
+        "prerequisites": "None",
+        "grading": "TBD",
+        "description": "N/A"
+    },
+    {
+        "code": "12345",
+        "name": "wert",
+        "instructor": "wer",
+        "semester": "qwer",
+        "schedule": "wer",
+        "classroom": "TBD",
+        "prerequisites": "",
+        "grading": "",
+        "description": ""
     }
 ]

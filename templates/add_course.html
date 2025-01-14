@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Add a New Course</title>
+</head>
+
+<body>
+    <h1>Add a New Course</h1>
+
+    <h4>  <i> All the fields with <span style="color: red;">*</span> are mandatory. </i>  </h4>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <form method="POST" action="{{ url_for('add_course') }}">
+
+        <label for="instructor">Instructor <span style="color: red;">*</span> </label>
+        <input type="text" name="instructor" id="instructor" required pattern="[A-Za-z\s]+" title = "Instructor name can contain only text and spaces."><br>
+        <br>
+        <label for="semester">Semester <span style="color: red;">*</span> </label>
+        <input type="text" name="semester" id="semester" required><br>
+        <br>
+        <label for="schedule">Schedule <span style="color: red;">*</span> </label>
+        <input type="text" name="schedule" id="schedule" required><br>
+        <br>
+        <label for="classroom">Classroom</label>
+        <input type="text" name="classroom" id="classroom" value = "TBD"><br>
+        <br>
+        <label for="prerequisites">Prerequisites</label>
+        <input type="text" name="prerequisites" id="prerequisites"><br>
+        <br>
+        <label for="grading">Grading</label>
+        <input type="text" name="grading" id="grading"><br>
+        <br>
+        <label for="code">Course Code <span style="color: red;">*</span> </label>
+        <input type="text" name="code" id="code" required><br>
+        <br>
+        <label for="description">Description</label>
+        <input type="text" name="description" id="description"><br>
+        <br>
+        <label for="name">Course Name <span style="color: red;">*</span> </label>
+        <input type="text" name="name" id="name" required><br>
+        <br>
+        <button type="submit">Add Course</button>
+    </form>
+</body>
+</html>
+{% endblock %}
