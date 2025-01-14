@@ -9,7 +9,7 @@ from opentelemetry.exporter.jaeger.thrift import JaegerExporter
 from opentelemetry.instrumentation.flask import FlaskInstrumentor
 from pythonjsonlogger import jsonlogger
 from opentelemetry.sdk.resources import Resource
-
+import time
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
@@ -43,6 +43,25 @@ FlaskInstrumentor().instrument_app(app)
 # Getting a Tracer Instance
 tracer = trace.get_tracer("flask-app","1.0.0")
 
+telemetry_data = {
+    "total_route_request_count": {
+        "/": 0,
+        "/catalog": 0,
+        "/course/<code>": 0,
+        "/add-course": 0,
+    },
+    "processing_time": {
+        "/": 0.0,
+        "/catalog": 0.0,
+        "/course/<code>": 0.0,
+        "/add-course": 0.0,
+    },
+    "error_count": {
+        "missing_fields": 0,
+        "duplicate_course_code": 0,
+    }
+}
+
 
 # Utility Functions
 def load_courses():
@@ -60,18 +79,31 @@ def save_courses(data):
     with open(COURSE_FILE, 'w') as file:
         json.dump(courses, file, indent=4)
 
+def save_telemetry_data():
+    """Save telemetry data to a file."""
+    with open(TELEMETRY_DATA, 'w') as file:
+        json.dump(telemetry_data, file, indent=4)
+
 
 # Routes
 @app.route('/')
 def index():
+    start_time = time.time()
     with tracer.start_as_current_span("index"):
         span = trace.get_current_span()
         span.set_attribute("user.ip", request.remote_addr)
         span.set_attribute("http.method", request.method)
+        telemetry_data["total_route_request_count"]["/"] += 1
         return render_template('index.html')
+    
+    #tracking processing time
+    processing_time = time.time() - start_time
+    telemetry_data["processing_time"]["/"] += processing_time
+    save_telemetry_data()
 
 @app.route('/catalog')
 def course_catalog():
+    start_time = time.time()
     with tracer.start_as_current_span("course_catalog"):
         #adding metadata to the spans
         span = trace.get_current_span()
@@ -81,12 +113,20 @@ def course_catalog():
 
         #debugging
         #print(f"Created span for /catalog: {span}.")
-
+        telemetry_data["total_route_request_count"]["/catalog"] += 1
         #span for loading courses
         with tracer.start_as_current_span("load_courses"):
             courses = load_courses()
+
+        response = render_template('course_catalog.html', courses=courses)
+    
+    processing_time = time.time() - start_time
+    telemetry_data["processing_time"]["/catalog"] += processing_time
+    save_telemetry_data()
+
+    return response
         
-        return render_template('course_catalog.html', courses=courses)
+
 
 
 @app.route('/course/<code>')
