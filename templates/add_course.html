@@ -24,34 +24,44 @@
     <form method="POST" action="{{ url_for('add_course') }}">
 
         <label for="instructor">Instructor <span style="color: red;">*</span> </label>
-        <input type="text" name="instructor" id="instructor" required pattern="[A-Za-z\s]+" title = "Instructor name can contain only text and spaces."><br>
+        <input type="text" name="instructor" id="instructor" value="{{ form_data['instructor'] if form_data.get('instructor') else '' }}" required pattern="^[A-Za-z\s\.,!@#\$%\^&\*\(\)\-_+=<>?/]*$" title="Instructor name can contain only text and spaces."><br>
         <br>
+    
         <label for="semester">Semester <span style="color: red;">*</span> </label>
-        <input type="text" name="semester" id="semester"><br>
+        <input type="text" name="semester" id="semester" value="{{ form_data['semester'] if form_data.get('semester') else '' }}"><br>
         <br>
+    
         <label for="schedule">Schedule <span style="color: red;">*</span> </label>
-        <input type="text" name="schedule" id="schedule"><br>
+        <input type="text" name="schedule" id="schedule" value="{{ form_data['schedule'] if form_data.get('schedule') else '' }}"><br>
         <br>
+    
         <label for="classroom">Classroom</label>
-        <input type="text" name="classroom" id="classroom"><br>
+        <input type="text" name="classroom" id="classroom" value="{{ form_data['classroom'] if form_data.get('classroom') else '' }}"><br>
         <br>
+    
         <label for="prerequisites">Prerequisites</label>
-        <input type="text" name="prerequisites" id="prerequisites"><br>
+        <input type="text" name="prerequisites" id="prerequisites" value="{{ form_data['prerequisites'] if form_data.get('prerequisites') else '' }}"><br>
         <br>
+    
         <label for="grading">Grading</label>
-        <input type="text" name="grading" id="grading"><br>
+        <input type="text" name="grading" id="grading" value="{{ form_data['grading'] if form_data.get('grading') else '' }}"><br>
         <br>
+    
         <label for="code">Course Code <span style="color: red;">*</span> </label>
-        <input type="text" name="code" id="code" ><br>
+        <input type="text" name="code" id="code" value="{{ form_data['code'] if form_data.get('code') else '' }}"><br>
         <br>
+    
         <label for="description">Description</label>
-        <input type="text" name="description" id="description"><br>
+        <input type="text" name="description" id="description" value="{{ form_data['description'] if form_data.get('description') else '' }}"><br>
         <br>
+    
         <label for="name">Course Name <span style="color: red;">*</span> </label>
-        <input type="text" name="name" id="name"><br>
+        <input type="text" name="name" id="name" value="{{ form_data['name'] if form_data.get('name') else '' }}"><br>
         <br>
+    
         <button type="submit">Add Course</button>
     </form>
+    
 </body>
 </html>
 {% endblock %}

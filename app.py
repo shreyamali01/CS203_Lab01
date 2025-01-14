@@ -17,6 +17,7 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 app = Flask(__name__)
 app.secret_key = 'secret'
 COURSE_FILE = 'course_catalog.json'
+TELEMETRY_DATA = 'telemetry.json'
 
 # Setting up JSON logging format
 logger = logging.getLogger()
@@ -42,7 +43,13 @@ FlaskInstrumentor().instrument_app(app)
 # Getting a Tracer Instance
 tracer = trace.get_tracer("flask-app","1.0.0")
 
+#telemetry data
+telemetry_file = {
+    "total_route_request_count" : {},
+    "processing_time": {},
+    "error_count": {}
 
+}
 
 # Utility Functions
 def load_courses():

@@ -222,3 +222,71 @@ INFO:werkzeug:127.0.0.1 - - [14/Jan/2025 14:57:39] "GET /add-course HTTP/1.1" 20
 INFO:werkzeug:127.0.0.1 - - [14/Jan/2025 14:57:43] "GET / HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [14/Jan/2025 14:57:44] "GET /catalog HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [14/Jan/2025 14:57:46] "GET /catalog HTTP/1.1" 200 -
+ * Debugger is active!
+ * Debugger PIN: 120-211-196
+127.0.0.1 - - [14/Jan/2025 22:35:17] "GET /catalog HTTP/1.1" 200 -
+127.0.0.1 - - [14/Jan/2025 22:35:18] "GET /add-course HTTP/1.1" 200 -
+Course added successfully: ES 321 - Introduction to Computation by Mrs. Spind for Winter
+127.0.0.1 - - [14/Jan/2025 22:36:22] "[32mPOST /add-course HTTP/1.1[0m" 302 -
+127.0.0.1 - - [14/Jan/2025 22:36:22] "GET /catalog HTTP/1.1" 200 -
+NativeEvent(path="/Users/shreya/Documents/CS203_Lab_01/course_catalog.json", inode=16050049, flags=11400, id=293295706): is_file, is_inode_meta_mod, is_modified
+queue_event FileModifiedEvent(src_path='/Users/shreya/Documents/CS203_Lab_01/course_catalog.json', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+127.0.0.1 - - [14/Jan/2025 22:36:58] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [14/Jan/2025 22:36:59] "GET /catalog HTTP/1.1" 200 -
+127.0.0.1 - - [14/Jan/2025 22:37:00] "GET /add-course HTTP/1.1" 200 -
+Failed to add course: Missing required fields - course code, course name, semester, schedule
+127.0.0.1 - - [14/Jan/2025 22:37:08] "POST /add-course HTTP/1.1" 200 -
+127.0.0.1 - - [14/Jan/2025 22:37:10] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [14/Jan/2025 22:37:10] "GET /catalog HTTP/1.1" 200 -
+127.0.0.1 - - [14/Jan/2025 22:37:12] "GET /course/CS101 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Jan/2025 22:37:14] "GET /course/CS%20203 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Jan/2025 22:37:17] "GET /course/CS%20672 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Jan/2025 22:37:22] "GET /course/HS%20221 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Jan/2025 22:54:05] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [14/Jan/2025 22:54:06] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [14/Jan/2025 22:54:06] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [14/Jan/2025 22:54:08] "GET /catalog HTTP/1.1" 200 -
+NativeEvent(path="/Users/shreya/Documents/CS203_Lab_01/app.py", inode=16050048, flags=11400, id=293358328): is_file, is_inode_meta_mod, is_modified
+queue_event FileModifiedEvent(src_path='/Users/shreya/Documents/CS203_Lab_01/app.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+ * Detected change in '/Users/shreya/Documents/CS203_Lab_01/app.py', reloading
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+[33mPress CTRL+C to quit[0m
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 120-211-196
+127.0.0.1 - - [14/Jan/2025 23:14:25] "GET /catalog HTTP/1.1" 200 -
+NativeEvent(path="/Users/shreya/Documents/CS203_Lab_01/app.py", inode=16050048, flags=11400, id=293432688): is_file, is_inode_meta_mod, is_modified
+queue_event FileModifiedEvent(src_path='/Users/shreya/Documents/CS203_Lab_01/app.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+ * Detected change in '/Users/shreya/Documents/CS203_Lab_01/app.py', reloading
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 120-211-196
+NativeEvent(path="/Users/shreya/Documents/CS203_Lab_01/app.py", inode=16050048, flags=11400, id=293502367): is_file, is_inode_meta_mod, is_modified
+queue_event FileModifiedEvent(src_path='/Users/shreya/Documents/CS203_Lab_01/app.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+ * Detected change in '/Users/shreya/Documents/CS203_Lab_01/app.py', reloading
+ * Restarting with watchdog (fsevents)
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+[33mPress CTRL+C to quit[0m
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 120-211-196
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+[33mPress CTRL+C to quit[0m
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 120-211-196
+NativeEvent(path="/Users/shreya/Documents/CS203_Lab_01/app.py", inode=16050048, flags=11400, id=293535635): is_file, is_inode_meta_mod, is_modified
+queue_event FileModifiedEvent(src_path='/Users/shreya/Documents/CS203_Lab_01/app.py', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+ * Detected change in '/Users/shreya/Documents/CS203_Lab_01/app.py', reloading
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 120-211-196
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+[33mPress CTRL+C to quit[0m
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 120-211-196

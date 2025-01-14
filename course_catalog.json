@@ -20,5 +20,38 @@
         "prerequisites": "Basic Python, Linux",
         "grading": "50% Assignment, 50% Quiz",
         "description": ""
+    },
+    {
+        "code": "HS 221",
+        "name": "Mandarin",
+        "instructor": "Mr ZhongMing",
+        "semester": "Winter",
+        "schedule": "Monday, Wednesday",
+        "classroom": "10/202",
+        "prerequisites": "None",
+        "grading": "50 % Midsem and 50 % Endsem",
+        "description": "Introductory Course in Mandarin"
+    },
+    {
+        "code": "CS 672",
+        "name": "Computer Architecture",
+        "instructor": "Ms. Wang",
+        "semester": "Winter",
+        "schedule": "Tuesday",
+        "classroom": "10/101",
+        "prerequisites": "Digital Systems (Optional)",
+        "grading": "60% Assignments, 20% Midsem, 20% Project",
+        "description": ""
+    },
+    {
+        "code": "ES 321",
+        "name": "Introduction to Computation",
+        "instructor": "Mrs. Spind",
+        "semester": "Winter",
+        "schedule": "Friday 2:00 pm - 3:30 pm",
+        "classroom": "7/209",
+        "prerequisites": "None",
+        "grading": "",
+        "description": ""
     }
 ]
