@@ -94,12 +94,14 @@ def index():
         span.set_attribute("user.ip", request.remote_addr)
         span.set_attribute("http.method", request.method)
         telemetry_data["total_route_request_count"]["/"] += 1
-        return render_template('index.html')
+        response = render_template('index.html')
     
     #tracking processing time
     processing_time = time.time() - start_time
     telemetry_data["processing_time"]["/"] += processing_time
     save_telemetry_data()
+
+    return response
 
 @app.route('/catalog')
 def course_catalog():
@@ -131,30 +133,43 @@ def course_catalog():
 
 @app.route('/course/<code>')
 def course_details(code):
+    start_time = time.time()
     with tracer.start_as_current_span("course_details"):
-        #ading metadata to the span
+        #adding metadata to the span
         span = trace.get_current_span()
         span.set_attribute("user.ip", request.remote_addr)
         span.set_attribute("http.method", request.method)
         span.set_attribute("http.status_code", 200)
+        telemetry_data["total_route_request_count"]["/course/<code>"] += 1
         courses = load_courses()
         course = next((course for course in courses if course['code'] == code), None)
     
         if not course:
             flash(f"No course found with code '{code}'.", "error")
+            processing_time = time.time() - start_time
+            telemetry_data["processing_time"]["/course/<code>"] += processing_time
+            save_telemetry_data()
             return redirect(url_for('course_catalog'))
-        return render_template('course_details.html', course=course)
+        response = render_template('course_details.html', course=course)
+    
+    processing_time = time.time() - start_time
+    telemetry_data["processing_time"]["/course/<code>"] += processing_time
+    save_telemetry_data()
+
+    return response
 
 
 #route to add a new course
 @app.route('/add-course', methods=['GET', 'POST'])
 def add_course():
-     with tracer.start_as_current_span("add_course"):
-         #adding metadata to the span
+    start_time = time.time()
+    with tracer.start_as_current_span("add_course"):
+        #adding metadata to the span
         span = trace.get_current_span()
         span.set_attribute("user.ip", request.remote_addr)
         span.set_attribute("http.method", request.method)
         span.set_attribute("http.status_code", 200)
+        telemetry_data["total_route_request_count"]["/add-course"] += 1
 
         if request.method == 'POST':
             #extracting the form data
@@ -200,6 +215,10 @@ def add_course():
                 missing_fields_str = ", ".join(missing_fields)
                 logging.error(f"Failed to add course: Missing required fields - {missing_fields_str}")
                 flash(f"Please provide the following required fields: {missing_fields_str}.", "error")
+                telemetry_data["error_count"]["missing_fields"] += 1
+                processing_time = time.time() - start_time
+                telemetry_data["processing_time"]["/add-course"] += processing_time
+                save_telemetry_data()
                 return render_template('add_course.html', form_data=form_data)
             
             courses = load_courses()
@@ -207,6 +226,10 @@ def add_course():
             if any(course['code'].lower() == course_code.lower() for course in courses):
                 logging.error(f"Duplicate course code: {course_code}")
                 flash("Course code already exists. Please use a unique code.", "error")
+                telemetry_data["error_count"]["duplicate_course_code"] += 1
+                processing_time = time.time() - start_time
+                telemetry_data["processing_time"]["/add-course"] += processing_time
+                save_telemetry_data()
                 return render_template('add_course.html', form_data=form_data)
 
             # Save the course
@@ -226,10 +249,17 @@ def add_course():
 
             logging.info(f"Course added successfully: {course_code} - {course_name} by {instructor} for {semester}")
             flash("Course added successfully!", "success")
+            processing_time = time.time() - start_time
+            telemetry_data["processing_time"]["/add-course"] += processing_time
+            save_telemetry_data()
             return redirect(url_for('course_catalog'))
 
         # Render the form template for GET requests
-        return render_template('add_course.html', form_data = {})
+        response = render_template('add_course.html', form_data = {})
+    processing_time = time.time() - start_time
+    telemetry_data["processing_time"]["/add-course"] += processing_time
+    save_telemetry_data()
+    return response
 
 
 if __name__ == '__main__':
