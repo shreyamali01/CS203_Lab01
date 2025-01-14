@@ -1,6 +1,6 @@
 import json
 import os
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for,g, flash
 import logging
 from opentelemetry import trace 
 from opentelemetry.sdk.trace import TracerProvider
@@ -43,13 +43,6 @@ FlaskInstrumentor().instrument_app(app)
 # Getting a Tracer Instance
 tracer = trace.get_tracer("flask-app","1.0.0")
 
-#telemetry data
-telemetry_file = {
-    "total_route_request_count" : {},
-    "processing_time": {},
-    "error_count": {}
-
-}
 
 # Utility Functions
 def load_courses():
